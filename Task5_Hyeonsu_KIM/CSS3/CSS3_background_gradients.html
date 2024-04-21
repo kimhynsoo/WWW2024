@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background_Gradients</title>
+</head>
+<style>
+    p{
+        font-size: 20px;
+        margin: auto;
+        
+    }
+    #grad1 {
+        height: 55px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+    #grad2 {
+        height: 200px;
+        width: 200px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: radial-gradient(circle, red, yellow, green);
+    }
+    #grad3 {
+        height: 200px;
+        width: 200px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: conic-gradient(red, yellow, green, blue, black);
+    }
+</style>
+<body>
+    <h1 style="margin: auto;">Gradients</h1>
+    <p>linear-gradient</p>
+    <div id="grad1" style="font-size: 40px; font-weight: bold; color: black; text-align: center;">
+        Rainbow Background
+    </div>
+    <hr>
+    <p>radial-gradient</p>
+    <div id="grad2"></div>
+    <hr>
+    <p>conic-gradient</p>
+    <div id="grad3"></div>
+</body>
+</html>

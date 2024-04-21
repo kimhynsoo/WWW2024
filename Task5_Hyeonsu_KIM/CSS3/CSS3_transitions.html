@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+
+    }
+    div:hover{
+        width: 300px;
+    }
+    div#myDiv1{
+        transition: width 2s, height 2s;
+    }
+   
+    div#myDiv1:hover{
+        width: 300px;
+        height: 300px;
+    }
+
+    div#myDiv2{
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s, height 2s, transform 2s;
+        
+    }
+    div#myDiv2:hover{
+        width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+    }
+    #div1 {transition-timing-function: linear;}
+    #div2 {transition-timing-function: ease;}
+    #div3 {transition-timing-function: ease-in;}
+    #div4 {transition-timing-function: ease-out;}
+    #div5 {transition-timing-function: ease-in-out;}
+
+</style>
+<body>
+    <h1>The transition Property</h1>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <div></div>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <div id="myDiv1"></div>
+
+    <h3>The transition-timing-function Property</h3>
+    <p>Hover over the div elements below, to see the different speed curves:</p>
+    <div id="div1">linear</div><br>
+    <div id="div2">ease</div><br>
+    <div id="div3">ease-in</div><br>
+    <div id="div4">ease-out</div><br>
+    <div id="div5">ease-in-out</div><br>
+
+    <h3>The transition-delay property</h3>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <div style="transition-delay: 1s;"></div>
+    <p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+    <h3>Transition + Transform</h3>
+    <p>Hover over the div element below:</p>
+    <div id="myDiv2"></div>
+
+    <h3>Using The transition Shorthand Property</h3>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <div style="transition: width 2s linear 1s;"></div>
+    <p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+
+    
+</body>
+</html>

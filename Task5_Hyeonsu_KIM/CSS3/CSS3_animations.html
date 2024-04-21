@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<style>
+    div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    #myDiv{
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        font-weight: bold;
+        position: relative;
+        animation: mymove 5s;
+        animation-fill-mode: forwards;
+    }
+    #myDiv2 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-duration: 3s;  
+        
+    }
+
+    @keyframes example1{
+        from {background-color: red;}
+        to {background-color: yellow;}
+    }
+    @keyframes example2 {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+    }
+    @keyframes example3 {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+    @keyframes mymove {
+        from {left: 0px;}
+        to {left: 300px;}
+    }
+    @keyframes example4 {
+        from {top: 0px; }
+        to {top: 200px; background-color: blue;}
+    }   
+    @keyframes example5 {
+        from {top: 0px; background-color: yellow;}
+        to {top:200px;}
+        
+    }
+    @keyframes example6 {
+        from {top: 0px; background-color: yellow;}
+        to {top:200px; background-color: blue;}
+        
+    }
+</style>
+<body>
+    <h1>CSS Animations</h1>
+    <p>red to yellow</p>
+    <div style="animation-name: example1; animation-duration: 4s;"></div>
+    <p>rainbow</p>
+    <div style="animation-name: example2; animation-duration: 4s;"></div>
+    <p>Moving rainbow</p>
+    <div style=" animation-name: example3; animation-duration: 4s;"></div>
+    <p style="margin-top: 220px;">Moving rainbow delayed</p>
+    <div style=" animation-name: example3; animation-duration: 4s; animation-delay: 2s;"></div>
+    <p style="margin-top: 220px;">Moving rainbow iteration infinite </p>
+    <div style=" animation-name: example3; animation-duration: 4s; animation-iteration-count: infinite;"></div>
+    <p style="margin-top: 220px;">Moving rainbow reverse </p>
+    <div style=" animation-name: example3; animation-duration: 4s; animation-direction: reverse;"></div>
+    <p style="margin-top: 220px;">Moving rainbow alternate </p>
+    <div style=" animation-name: example3; animation-duration: 4s; animation-iteration-count: 2; animation-direction: alternate;"></div>
+    <p style="margin-top: 220px;">Moving rainbow alternate reverse</p>
+    <div style=" animation-name: example3; animation-duration: 4s; animation-iteration-count: 2; animation-direction: alternate-reverse;"></div>
+    <p style="margin-top: 250px;">Specify the Speed Curve of the Animation</p>
+    <div id="myDiv" style="animation-timing-function: linear; ">linear</div>
+    <div id="myDiv" style="animation-timing-function: ease; ;">ease</div>
+    <div id="myDiv" style="animation-timing-function: ease-in; ">ease-in</div>
+    <div id="myDiv" style="animation-timing-function: ease-out; ">ease-out</div>
+    <div id="myDiv" style="animation-timing-function: ease-in-out; ">ease-in-out</div>
+
+    <h3>Specify the fill-mode For an Animation</h3>
+
+    <p>Forwards</p>
+    <div id="myDiv2" style="animation-name: example4; animation-fill-mode: forwards;"></div>
+    <p style="margin-top: 220px;">Backwards</p>
+    <div id="myDiv2" style=" animation-name: example5; animation-fill-mode: backwards;"></div>
+    <p style="margin-top: 220px;">Both</p>
+    <div id="myDiv2" style="animation-name: example6; animation-fill-mode: both;"></div>
+
+    <h3 style="margin-top: 220px;">Animation Shorthand Property</h3>
+    <div style="animation: example3 5s linear 2s infinite alternate;"></div>
+
+
+
+
+</body>
+</html>
