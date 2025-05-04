@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="main.html">Main Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" >
+                <li class="nav-item active">
+                    <a class="nav-link" href="main.html">Searching Movie<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search_actor.html">Searching Actor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search_genre.html">Searching Genre</a>
+                </li>
+            </ul>
+            <button id="changeColor" class="btn btn-secondary">Change Navbar Color</button> <!-- Color change button added -->
+
+        </div>
+    </nav>
+    <!-- Navbar end -->
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <!-- Search input -->
+                <input type="text" id="searchInput" class="form-control" placeholder="Searching movies...">
+            </div>
+            <div class="col-auto">
+                <!-- Search button -->
+                <button id="searchButton" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+        <div class="row mt-3" id="movies">
+            <!-- Movie search results will be displayed here -->
+        </div>
+        <nav>
+            <ul class="pagination justify-content-center" id="pagination">
+                <!-- Pagination buttons will be added here -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="search_movie.js"></script> <!-- JavaScript file
+</body>
+</html>
